@@ -30,12 +30,18 @@ namespace Computer_Graphics
 
         private float[,] figurePoints = 
             {
-                { -3, 3, 1},
-                { 3, 3, 1},
-                { 1, -3, 1},
-                { 1, -1, 1},
-                { -1, -1, 1},
-                { -1, -3, 1} 
+                { -3, 3, 1, 1},
+                { 3, 3, 1, 1},
+                { 1, -3, 1, 1},
+                { 1, -1, 1, 1},
+                { -1, -1, 1, 1},
+                { -1, -3, 1, 1},
+                { -3, 3, -1, 1},
+                { 3, 3, -1, 1},
+                { 1, -3, -1, 1},
+                { 1, -1, -1, 1},
+                { -1, -1, -1, 1},
+                { -1, -3, -1, 1},
             };
 
         private void Multiplication(float[,] a, float[,] b)
@@ -59,9 +65,10 @@ namespace Computer_Graphics
         {
             float[,] tranlateMatrix =
                 {
-                    {1,0,0},
-                    {0,1,0},
-                    {x,y,1}
+                    {1,0,0,0},
+                    {0,1,0,0},
+                    {0,0,1,0},
+                    {x,y,0,1}
                 };
             Multiplication(figurePoints, tranlateMatrix);
         }
@@ -70,9 +77,10 @@ namespace Computer_Graphics
         {
                 float[,] transferMatrix =
                 {
-                { (float)Math.Cos(angle), (float)Math.Sin(angle), 0 },
-                { -(float)Math.Sin(angle), (float)Math.Cos(angle), 0 },
-                { 0, -1 ,1 },
+                {(float)Math.Cos(angle), 0, (float)Math.Sin(angle), 0 },
+                {0, 1, 0, 0 },
+                {-(float)Math.Sin(angle), 0, (float)Math.Cos(angle), 0 },
+                { 0, 0, 0, 1},
                 };
 
                 Multiplication(figurePoints, transferMatrix);
@@ -82,9 +90,10 @@ namespace Computer_Graphics
         {
             float[,] ScaleMatrix =
                 {
-                    {x,0,0},
-                    {0,y,0},
-                    {0,0,1}
+                    {x,0,0,0},
+                    {0,y,0,0},
+                    {0,0,1,0},
+                    {0,0,0,1}
                 };
             Multiplication(figurePoints, ScaleMatrix);
         }
@@ -97,6 +106,7 @@ namespace Computer_Graphics
 
             g.DrawLine(blackPen, ClientSize.Width / 2, 0, ClientSize.Width / 2, ClientSize.Height);
             g.DrawLine(blackPen, 0, ClientSize.Height / 2, ClientSize.Width, ClientSize.Height / 2);
+            g.DrawLine(blackPen, ClientSize.Width / 2, ClientSize.Height / 2, 0, ClientSize.Height);
         }
 
         private void DrawGreed()
@@ -131,9 +141,14 @@ namespace Computer_Graphics
             Pen blackPen = new Pen(Color.Black, 3);
             blackPen.Width = 1;
 
-            for (int i = 1; i < figurePoints.GetLength(0); i++)
+            for (int i = 1; i < figurePoints.GetLength(0) / 2 - 1 + 1; i++)
                 g.DrawLine(blackPen, figurePoints[i - 1, 0] * gridSize + w / 2, figurePoints[i - 1, 1] * -gridSize + h / 2, figurePoints[i, 0] * gridSize + w / 2, figurePoints[i, 1] * -gridSize + h / 2);
-            g.DrawLine(blackPen, figurePoints[figurePointsLenth - 1, 0] * gridSize + w / 2, figurePoints[figurePointsLenth - 1, 1] * -gridSize + h / 2, figurePoints[0, 0] * gridSize + w / 2, figurePoints[0, 1] * -gridSize + h / 2);
+            g.DrawLine(blackPen, figurePoints[figurePointsLenth / 2 - 1, 0] * gridSize + w / 2, figurePoints[figurePointsLenth / 2 - 1, 1] * -gridSize + h / 2, figurePoints[0, 0] * gridSize + w / 2, figurePoints[0, 1] * -gridSize + h / 2);
+            for (int i = figurePoints.GetLength(0) / 2 + 1; i < figurePoints.GetLength(0); i++)
+                g.DrawLine(blackPen, figurePoints[i - 1, 0] * gridSize + w / 2, figurePoints[i - 1, 1] * -gridSize + h / 2, figurePoints[i, 0] * gridSize + w / 2, figurePoints[i, 1] * -gridSize + h / 2);
+            g.DrawLine(blackPen, figurePoints[figurePointsLenth - 1, 0] * gridSize + w / 2, figurePoints[figurePointsLenth - 1, 1] * -gridSize + h / 2, figurePoints[figurePointsLenth / 2, 0] * gridSize + w / 2, figurePoints[figurePointsLenth / 2, 1] * -gridSize + h / 2);
+            for (int i = 1; i < figurePointsLenth / 2 + 1; i++)
+                g.DrawLine(blackPen, figurePoints[i - 1, 0] * gridSize + w / 2, figurePoints[i - 1, 1] * -gridSize + h / 2, figurePoints[i + figurePointsLenth / 2 - 1, 0] * gridSize + w / 2, figurePoints[i + figurePointsLenth / 2 - 1, 1] * -gridSize + h / 2);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -253,12 +268,18 @@ namespace Computer_Graphics
 
             float[,] initialPoints =
             {
-                { -3, 3, 1},
-                { 3, 3, 1},
-                { 1, -3, 1},
-                { 1, -1, 1},
-                { -1, -1, 1},
-                { -1, -3, 1}
+                { -3, 3, 1, 1},
+                { 3, 3, 1, 1},
+                { 1, -3, 1, 1},
+                { 1, -1, 1, 1},
+                { -1, -1, 1, 1},
+                { -1, -3, 1, 1},
+                { -3, 3, -1, 1},
+                { 3, 3, -1, 1},
+                { 1, -3, -1, 1},
+                { 1, -1, -1, 1},
+                { -1, -1, -1, 1},
+                { -1, -3, -1, 1},
             };
 
             Array.Copy(initialPoints, figurePoints, initialPoints.Length);

@@ -64,7 +64,7 @@
             // MoveRightBtn
             // 
             this.MoveRightBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MoveRightBtn.Location = new System.Drawing.Point(1014, 431);
+            this.MoveRightBtn.Location = new System.Drawing.Point(161, 80);
             this.MoveRightBtn.Name = "MoveRightBtn";
             this.MoveRightBtn.Size = new System.Drawing.Size(30, 30);
             this.MoveRightBtn.TabIndex = 1;
@@ -75,7 +75,7 @@
             // MoveLeftBtn
             // 
             this.MoveLeftBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MoveLeftBtn.Location = new System.Drawing.Point(942, 431);
+            this.MoveLeftBtn.Location = new System.Drawing.Point(89, 80);
             this.MoveLeftBtn.Name = "MoveLeftBtn";
             this.MoveLeftBtn.Size = new System.Drawing.Size(30, 30);
             this.MoveLeftBtn.TabIndex = 2;
@@ -86,7 +86,7 @@
             // MoveUpBtn
             // 
             this.MoveUpBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MoveUpBtn.Location = new System.Drawing.Point(978, 395);
+            this.MoveUpBtn.Location = new System.Drawing.Point(125, 44);
             this.MoveUpBtn.Name = "MoveUpBtn";
             this.MoveUpBtn.Size = new System.Drawing.Size(30, 30);
             this.MoveUpBtn.TabIndex = 3;
@@ -97,7 +97,7 @@
             // MoveDownBtn
             // 
             this.MoveDownBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MoveDownBtn.Location = new System.Drawing.Point(978, 431);
+            this.MoveDownBtn.Location = new System.Drawing.Point(125, 80);
             this.MoveDownBtn.Name = "MoveDownBtn";
             this.MoveDownBtn.Size = new System.Drawing.Size(30, 30);
             this.MoveDownBtn.TabIndex = 4;
@@ -107,14 +107,14 @@
             // 
             // RotateValue
             // 
-            this.RotateValue.Location = new System.Drawing.Point(872, 537);
+            this.RotateValue.Location = new System.Drawing.Point(19, 186);
             this.RotateValue.Name = "RotateValue";
             this.RotateValue.Size = new System.Drawing.Size(100, 23);
             this.RotateValue.TabIndex = 5;
             // 
             // RotateBtn
             // 
-            this.RotateBtn.Location = new System.Drawing.Point(978, 537);
+            this.RotateBtn.Location = new System.Drawing.Point(125, 186);
             this.RotateBtn.Name = "RotateBtn";
             this.RotateBtn.Size = new System.Drawing.Size(75, 23);
             this.RotateBtn.TabIndex = 6;
@@ -124,14 +124,14 @@
             // 
             // ScaleValueX
             // 
-            this.ScaleValueX.Location = new System.Drawing.Point(872, 479);
+            this.ScaleValueX.Location = new System.Drawing.Point(19, 128);
             this.ScaleValueX.Name = "ScaleValueX";
             this.ScaleValueX.Size = new System.Drawing.Size(100, 23);
             this.ScaleValueX.TabIndex = 7;
             // 
             // ScaleBtnX
             // 
-            this.ScaleBtnX.Location = new System.Drawing.Point(978, 479);
+            this.ScaleBtnX.Location = new System.Drawing.Point(125, 128);
             this.ScaleBtnX.Name = "ScaleBtnX";
             this.ScaleBtnX.Size = new System.Drawing.Size(75, 23);
             this.ScaleBtnX.TabIndex = 8;
@@ -141,14 +141,14 @@
             // 
             // ScaleValueY
             // 
-            this.ScaleValueY.Location = new System.Drawing.Point(872, 508);
+            this.ScaleValueY.Location = new System.Drawing.Point(19, 157);
             this.ScaleValueY.Name = "ScaleValueY";
             this.ScaleValueY.Size = new System.Drawing.Size(100, 23);
             this.ScaleValueY.TabIndex = 9;
             // 
             // ScaleBtnY
             // 
-            this.ScaleBtnY.Location = new System.Drawing.Point(978, 508);
+            this.ScaleBtnY.Location = new System.Drawing.Point(125, 157);
             this.ScaleBtnY.Name = "ScaleBtnY";
             this.ScaleBtnY.Size = new System.Drawing.Size(75, 23);
             this.ScaleBtnY.TabIndex = 10;
@@ -158,7 +158,7 @@
             // 
             // ReflectionBtnX
             // 
-            this.ReflectionBtnX.Location = new System.Drawing.Point(872, 566);
+            this.ReflectionBtnX.Location = new System.Drawing.Point(19, 215);
             this.ReflectionBtnX.Name = "ReflectionBtnX";
             this.ReflectionBtnX.Size = new System.Drawing.Size(90, 23);
             this.ReflectionBtnX.TabIndex = 11;
@@ -168,7 +168,7 @@
             // 
             // ReflectionBtnY
             // 
-            this.ReflectionBtnY.Location = new System.Drawing.Point(963, 566);
+            this.ReflectionBtnY.Location = new System.Drawing.Point(110, 215);
             this.ReflectionBtnY.Name = "ReflectionBtnY";
             this.ReflectionBtnY.Size = new System.Drawing.Size(90, 23);
             this.ReflectionBtnY.TabIndex = 12;
@@ -179,7 +179,7 @@
             // ZomIn
             // 
             this.ZomIn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ZomIn.Location = new System.Drawing.Point(872, 395);
+            this.ZomIn.Location = new System.Drawing.Point(19, 44);
             this.ZomIn.Name = "ZomIn";
             this.ZomIn.Size = new System.Drawing.Size(30, 30);
             this.ZomIn.TabIndex = 13;
@@ -190,7 +190,7 @@
             // ZoomOut
             // 
             this.ZoomOut.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ZoomOut.Location = new System.Drawing.Point(872, 431);
+            this.ZoomOut.Location = new System.Drawing.Point(19, 80);
             this.ZoomOut.Name = "ZoomOut";
             this.ZoomOut.Size = new System.Drawing.Size(30, 30);
             this.ZoomOut.TabIndex = 14;
@@ -200,7 +200,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(853, 351);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(216, 274);
             this.pictureBox1.TabIndex = 15;
@@ -209,7 +209,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(920, 361);
+            this.label1.Location = new System.Drawing.Point(71, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 15);
             this.label1.TabIndex = 16;
@@ -217,7 +217,7 @@
             // 
             // ResetBtn
             // 
-            this.ResetBtn.Location = new System.Drawing.Point(924, 593);
+            this.ResetBtn.Location = new System.Drawing.Point(71, 242);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(75, 23);
             this.ResetBtn.TabIndex = 17;
