@@ -25,7 +25,8 @@ namespace Computer_Graphics
             
         }
 
-        private float gridSize = 20;
+        private float gridSize = 30;
+        private float scrollMultiplicator = 1;
 
         private float[,] figurePoints = 
             {
@@ -149,27 +150,6 @@ namespace Computer_Graphics
             DrawCoordinates();
         }
 
-        //private void Form1_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    if (e.Delta > 0 && scrollMultiplicator < 3)
-        //    {
-        //        scrollMultiplicator += (float)0.1;
-        //        gridSize = 40;
-        //        gridSize *= scrollMultiplicator;
-        //    }
-
-        //    if (e.Delta < 0 && scrollMultiplicator > 0.1)
-        //    {
-        //        scrollMultiplicator -= (float)0.1;
-        //        gridSize = 40;
-        //        gridSize *= scrollMultiplicator;
-        //    }
-
-        //    Console.WriteLine(scrollMultiplicator);
-
-        //    button1_Click(sender, e);
-        //}
-
         private void MoveRightBtn_Click(object sender, EventArgs e)
         {
             TranslateXY(1, 0);
@@ -203,8 +183,6 @@ namespace Computer_Graphics
 
                 Rotate(angle);
                 Render();
-
-                RotateValue.Text = "";
             }
         }
 
@@ -243,6 +221,48 @@ namespace Computer_Graphics
         private void ReflectionBtnX_Click(object sender, EventArgs e)
         {
             ScaleXY(1, -1);
+            Render();
+        }
+
+        private void ZomIn_Click(object sender, EventArgs e)
+        {
+            if (scrollMultiplicator < 3)
+            {
+                scrollMultiplicator += (float)0.1;
+                gridSize = 30;
+                gridSize *= scrollMultiplicator;
+                Render();
+            }
+        }
+
+        private void ZoomOut_Click(object sender, EventArgs e)
+        {
+            if (scrollMultiplicator > 0.2)
+            {
+                scrollMultiplicator -= (float)0.1;
+                gridSize = 30;
+                gridSize *= scrollMultiplicator;
+                Render();
+            }
+        }
+
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            gridSize = 30;
+            scrollMultiplicator = 1;
+
+            float[,] initialPoints =
+            {
+                { -3, 3, 1},
+                { 3, 3, 1},
+                { 1, -3, 1},
+                { 1, -1, 1},
+                { -1, -1, 1},
+                { -1, -3, 1}
+            };
+
+            Array.Copy(initialPoints, figurePoints, initialPoints.Length);
+            
             Render();
         }
     }
